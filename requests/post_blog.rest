@@ -1,10 +1,11 @@
 POST http://localhost:3003/api/blogs
 Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik5Hb3p5IiwiaWQiOiI2MTFkNTY4NDNhNmZlMDFlYTBiNjI5NmMiLCJpYXQiOjE2MjkzNjg2MjV9.n212xnwBQTFNjJLc8uKaXEfLi9nvpmJ-ptM6LK4IUlw
 
 {
-  "title": "Cuban Hotel",
-  "author": "Waheed",
-  "url": "http://cubanagrp.com",
-  "likes": 15000,
-  "userId": "611d56843a6fe01ea0b6296c"
+  "title": "Five Star",
+  "author": "Sheikh Rajh",
+  "url": "http://burstar.com",
+  "likes": 105000,
+  "userId": "611e1d94a8a1b5029d894af8"
 }

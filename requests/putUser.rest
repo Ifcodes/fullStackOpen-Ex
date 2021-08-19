@@ -1,0 +1,8 @@
+PUT http://localhost:3003/api/blogUsers/611d56843a6fe01ea0b6296c
+
+Content-Type: application/json
+
+{
+  "password": "Dbernard"
+}
+

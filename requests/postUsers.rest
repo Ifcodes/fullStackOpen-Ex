@@ -2,7 +2,7 @@ POST http://localhost:3003/api/blogUsers
 Content-Type: application/json
 
 {
-  "name": "La",
+  "name": "Ladipo",
   "username": "Nzagi",
   "password": "feneve"
 }
