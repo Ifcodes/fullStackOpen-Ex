@@ -2,8 +2,9 @@ POST http://localhost:3003/api/blogs
 Content-Type: application/json
 
 {
-  "title": "cubana",
-  "aurthor": "youtube",
-  "url": "unknown",
-  "like": 1
+  "title": "Cuban Hotel",
+  "author": "Waheed",
+  "url": "http://cubanagrp.com",
+  "likes": 15000,
+  "userId": "611d56843a6fe01ea0b6296c"
 }

@@ -18,14 +18,17 @@ const blogSchema = new mongoose.Schema({
     type: String,
     minLength: [3, 'must be more than 3 letters'],
     required: true,
-    unique: true
   },
   likes: {
     type: Number,
     minLength: [1, 'must be more than 3 letters'],
     required: true,
-    unique: true
+  },
+  user: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User'
   }
+  
 })
 
 blogSchema.plugin(mongooseValidator)
@@ -38,6 +41,6 @@ blogSchema.set('toJSON', {
   },
 })
 
-const Blog = mongoose.model('Blog', blogSchema)
+// const Blog = 
 
-module.exports = Blog
+module.exports = mongoose.model('Blog', blogSchema)
