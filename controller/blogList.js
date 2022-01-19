@@ -7,10 +7,23 @@ const { tokenExtractor } = require('../utils/middleware')
 
 
 blogRouter.get('/', async (request, response, next) =>{
-  const blogs = await Blog.find({}).populate('user')
 
   try {
-    response.json(blogs)
+    const blogs = await Blog.find({})
+    
+    const decodedToken = jwt.verify(request.token, process.env.SECRET)
+
+    logger.info({decodedToken})
+
+    const filteredBlog = blogs.filter(blog => blog.user !== undefined)
+
+    const newBlog = filteredBlog.filter(blog => blog.user.toString() === decodedToken.id)
+
+    const blogsToDisplay = newBlog.map(blog => {
+        return blog.toJSON()
+    })
+
+    response.json(blogsToDisplay)
   } catch (exception) {
     next(exception)
   }
@@ -36,8 +49,8 @@ blogRouter.post('/', async (request, response, next) => {
     title: body.title,
     author: body.author,
     url: body.url,
-    likes: body.likes,
-    user: user._Id
+    likes: body.likes ? body.likes : 0,
+    user: user._id
   })
 
   try {
@@ -59,6 +72,7 @@ blogRouter.put('/:id', async (req, res, next) => {
 
   res.status(200).json(updatedBlog)
 })
+
 blogRouter.delete('/:id', async (req, res, next) => {
 
   if(!req.token){

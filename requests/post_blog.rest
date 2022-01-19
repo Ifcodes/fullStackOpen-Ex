@@ -1,11 +1,10 @@
 POST http://localhost:3003/api/blogs
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik5Hb3p5IiwiaWQiOiI2MTFkNTY4NDNhNmZlMDFlYTBiNjI5NmMiLCJpYXQiOjE2MjkzNjg2MjV9.n212xnwBQTFNjJLc8uKaXEfLi9nvpmJ-ptM6LK4IUlw
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IklmY29kZXMiLCJpZCI6IjYxMjc4ODQyNDRjMzJlNjg3YWI2OTY2ZiIsImlhdCI6MTYzMDI1MzM2N30.0vWFqphtWx_yWLMt6gvKLlB_8SZ0qpifRWOsIIb61uQ
 
 {
-  "title": "Five Star",
-  "author": "Sheikh Rajh",
-  "url": "http://burstar.com",
-  "likes": 105000,
-  "userId": "611e1d94a8a1b5029d894af8"
+  "title": "Anita Okoye F",
+  "author": "Chuk",
+  "url": "http://saheed.com",
+  "likes": 0
 }

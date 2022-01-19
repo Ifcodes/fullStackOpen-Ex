@@ -22,7 +22,6 @@ const blogSchema = new mongoose.Schema({
   likes: {
     type: Number,
     minLength: [1, 'must be more than 3 letters'],
-    required: true,
   },
   user: {
       type: mongoose.Schema.Types.ObjectId,
@@ -43,4 +42,4 @@ blogSchema.set('toJSON', {
 
 // const Blog = 
 
-module.exports = mongoose.model('Blog', blogSchema)
+module.exports = mongoose.model('Blog')
